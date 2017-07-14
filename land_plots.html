@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <table class="table table-striped table-hover " class="col-md-6 col-md-ofset-2">
+        <table class="table table-striped table-hover ">
            
   <tr class="active">
       <th></th>
@@ -48,16 +48,92 @@
 </table> 
     </div>
         
-   <div class="conteiner">
-       <form class="col-md-8 col-md-ofset-2" >
-            <label >Кадастровий номер  <input type="text" name="-----------"/></label>
-           <input type="submit" value="Submit"/>
-       </form>
+   <div class="container">
+      <form role="form" class="col-md-8 col-md-offset-2" >
+  <div class="form-group">
+       <div class="row">
+              <div class="col-md-6">
+  <label for="input">Кадастровий номер ділянки*  </label>
+  </div>
+   <div class="col-md-5">
+  <input id="input" type="text" name="number" >
+  </div>
+              <div class="col-md-1">
+      <button type="button" class="btn btn-primary">Шукати</button>
      
- 
-   </div>
-   
+      </div>
+      </div>
+       <br>
+          <div class="form-group input-group">
+              <div class="row">
+              <div class="col-md-6">
+                  <label >Документ, що посвідчує право власності/користування ділянкою*
+              </div>
+              <div class="col-md-6">
+                  <textarea class="form-control" rows="2" cols="50"  ></textarea>
+                      </label>
+                  </div>
+               </div>
+              </div>
+       
+       <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+  <label for="sel1">Область*</label>
+  </div>
+  <div class="col-md-6">
+  <select class="form-control" id="sel1">
+    <option>Львівська</option>
+    <option>Вінницька</option>
+    <option>Волинська</option>
+    <option>Закарпатська</option>
+  </select>
+</div>
+</div>
+</div> 
 
+<div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+  <label for="sel1">Район*</label>
+  </div>
+  <div class="col-md-6">
+  <select class="form-control" id="sel1">
+    <option>Стрийський</option>
+    <option>Вінницька</option>
+    <option>Волинська</option>
+    <option>Закарпатська</option>
+  </select>
+</div>
+</div>
+</div>
+<div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+  <label for="sel1">Населений пункт(якщо ділянка в межах населеного пункту*</label>
+  </div>
+  <div class="col-md-6">
+  <select class="form-control" id="sel1">
+    <option>Місто</option>
+    <option>Вінницька</option>
+    <option>Волинська</option>
+    <option>Закарпатська</option>
+  </select>
+</div>
+</div>
+</div>
+<div class="form-group">
+            <div class="row">
+              <div class="col-md-1 col-md-offset-11" >
+                 <button type="button" class="btn btn-default">Додати ділянку</button>
+                  
+                 </div>
+             </div>
+    </div>
+           
+       </form>
+      </div>
+    
 
 </body>
 </html>
