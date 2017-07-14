@@ -1,0 +1,56 @@
+<div class="page page-table">
+    <section class="panel panel-default table-dynamic">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-translate="LBL_FINANCICAL_RECEIPT_CREATION_HEADER"></span> </strong></div>
+        <div class="panel-body">
+            <section class="receipt">
+                <div>
+                    <ul class="nav nav-pills tabs">
+                        <li class="btn">
+                            <span data-translate="LBL_DELIVERY_TERMS">DELIVERY TERMS</span>
+                        </li>
+                        <li class="btn">
+                            <span data-translate="LBL_LAND_PLOTS">LAND PLOTS</span>
+                        </li>
+                        <li class="btn btn-primary">
+                            <span data-translate="LBL_PLEDGE_SUBJECT">SUBJECT</span>
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="row">
+                    <form role="form" name="ctrl.creationForm" class="col-md-7 col-md-offset-2" novalidate>
+
+                        <!--Delivery terms tab-->
+                    
+						<label><span>Field name</span></label>
+							<input type="number" class="form-control"
+								   name="CreditorTaxCode"
+								   ng-model="ctrl.creationModel.creditor.taxCode"
+								   ng-maxlength="256"
+								   required>
+							<div class="help-block error" ng-messages="ctrl.creationForm.CreditorTaxCode.$error">
+								<p ng-message="maxlength"><span data-translate="ERR_TAXCODE_JURISTICAL_TOO_LONG"></span></p>
+								<p ng-message="required"><span data-translate="ERR_TAXCODE_JURISTICAL_REQUIRED"></span></p>
+						</div>
+                        <!--Lend plots tab-->
+                        <!--<div ng-show="ctrl.currentTab == 5">
+                            <h1>page</h1>5
+                        </div>-->
+
+                        <!--Pledge subject tab-->
+                        <!--<div ng-show="ctrl.currentTab == 6">
+                            <h1>page</h1>6
+                        </div>-->
+
+                    </form>
+                </div>
+
+                <div>
+                    <a class="btn btn-default"  data-translate="LBL_CLOSE">prev</a>
+                    <a class="btn btn-default pull-right" data-translate="LBL_NEXT">next</a>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>
+<link href="css/styles.css" rel="stylesheet" />
