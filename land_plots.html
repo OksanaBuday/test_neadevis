@@ -1,139 +1,156 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Land Plots</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <div>
+        <ul class="nav nav-pills tabs">
+            <li class="btn">
+                <a href="index.html"> <span data-translate="LBL_DELIVERY_TERMS"> MAIN </span></a>
+            </li>
+            <li class="btn">
+                <a href="delivery_terms.html"> <span data-translate="LBL_LAND_PLOTS">DELIVERY TERMS</span></a>
+            </li>
+            <!--<li class="btn">-->
+            <!--   <a href="land_plots.html"> <span data-translate="LBL_LAND_PLOTS" >LAND PLOTS</span></a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <hr />
     <div class="container">
         <table class="table table-striped table-hover ">
-           
-  <tr class="active">
-      <th></th>
-      <th></th>
-    <th>Кадастровий номер</th>
-    <th >Область, район</th>
-    <th >Документ</th>
-    <th >ЗК</th>
-    <th >З</th>
-  </tr>
-  <tr class="info">
-      <td></td>
-      <td></td>
-      <td>1234756557:12:32:3432</td>
-       <td>Миколаївська обл, Арбузинський р-н</td>
-       <td>Свідоцтво про право власності № 123</td>
-       <td > <input type="checkbox" name=""></td>
-       <td type="number">2</td>
-  </tr>
-  <tr >
-      <td></td>
-      <td></td>
-      <td>1234756557:12:32:3432</td>
-       <td>Миколаївська обл, Арбузинський р-н</td>
-       <td>Свідоцтво про право власності № 123</td>
-       <td > <input type="checkbox" name=""></td>
-       <td type="number">2</td>
-  </tr> 
-  <tr class="info">
-      <td></td>
-      <td></td>
-      <td>1234756557:12:32:3432</td>
-       <td>Миколаївська обл, Арбузинський р-н</td>
-       <td>Свідоцтво про право власності № 123</td>
-       <td > <input type="checkbox" name=""></td>
-       <td type="number">2</td>
-  </tr>
-</table> 
+
+            <tr class="active">
+                <th></th>
+                <th></th>
+                <th>Кадастровий номер</th>
+                <th>Область, район</th>
+                <th>Документ</th>
+                <th>ЗК</th>
+                <th>З</th>
+            </tr>
+            <tr class="info">
+                <td></td>
+                <td></td>
+                <td>1234756557:12:32:3432</td>
+                <td>Миколаївська обл, Арбузинський р-н</td>
+                <td>Свідоцтво про право власності № 123</td>
+                <td> <input type="checkbox" name=""></td>
+                <td type="number">2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1234756557:12:32:3432</td>
+                <td>Миколаївська обл, Арбузинський р-н</td>
+                <td>Свідоцтво про право власності № 123</td>
+                <td> <input type="checkbox" name=""></td>
+                <td type="number">2</td>
+            </tr>
+            <tr class="info">
+                <td></td>
+                <td></td>
+                <td>1234756557:12:32:3432</td>
+                <td>Миколаївська обл, Арбузинський р-н</td>
+                <td>Свідоцтво про право власності № 123</td>
+                <td> <input type="checkbox" name=""></td>
+                <td type="number">2</td>
+            </tr>
+        </table>
     </div>
-        
-   <div class="container">
-      <form role="form" class="col-md-8 col-md-offset-2" >
-  <div class="form-group">
-       <div class="row">
-              <div class="col-md-6">
-  <label for="input">Кадастровий номер ділянки*  </label>
-  </div>
-   <div class="col-md-5">
-  <input id="input" type="text" name="number" >
-  </div>
-              <div class="col-md-1">
-      <button type="button" class="btn btn-primary">Шукати</button>
-     
-      </div>
-      </div>
-       <br>
-          <div class="form-group input-group">
-              <div class="row">
-              <div class="col-md-6">
-                  <label >Документ, що посвідчує право власності/користування ділянкою*
+
+    <div class="container">
+        <form role="form" class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-right"> <label for="input">Кадастровий номер ділянки*  </label></p>
+                    </div>
+                    <div class="col-md-5">
+                        <input id="input" type="text" name="number">
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-primary">Шукати</button>
+
+                    </div>
+                </div>
+                <br>
+                <div class="form-group input-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                             <p class="text-right"><label for="document">Документ, що посвідчує право власності/користування ділянкою* </label></p>
               </div>
               <div class="col-md-6">
-                  <textarea class="form-control" rows="2" cols="50"  ></textarea>
-                      </label>
-                  </div>
-               </div>
-              </div>
-       
-       <div class="form-group">
-            <div class="row">
-              <div class="col-md-6">
-  <label for="sel1">Область*</label>
-  </div>
-  <div class="col-md-6">
-  <select class="form-control" id="sel1">
+                  <textarea id="document"class="form-control" rows="2" cols="50"  ></textarea>
+                     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-right"> <label for="sel1">Область*</label></p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="sel1">
     <option>Львівська</option>
     <option>Вінницька</option>
     <option>Волинська</option>
     <option>Закарпатська</option>
   </select>
-</div>
-</div>
-</div> 
+                        </div>
+                    </div>
+                </div>
 
-<div class="form-group">
-            <div class="row">
-              <div class="col-md-6">
-  <label for="sel1">Район*</label>
-  </div>
-  <div class="col-md-6">
-  <select class="form-control" id="sel1">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-right"> <label for="sel2">Район*</label></p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="sel2">
     <option>Стрийський</option>
     <option>Вінницька</option>
     <option>Волинська</option>
     <option>Закарпатська</option>
   </select>
-</div>
-</div>
-</div>
-<div class="form-group">
-            <div class="row">
-              <div class="col-md-6">
-  <label for="sel1">Населений пункт(якщо ділянка в межах населеного пункту*</label>
-  </div>
-  <div class="col-md-6">
-  <select class="form-control" id="sel1">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                           <p class="text-right">  <label for="sel3">Населений пункт(якщо ділянка в межах населеного пункту*</label></p>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="sel3">
     <option>Місто</option>
     <option>Вінницька</option>
     <option>Волинська</option>
     <option>Закарпатська</option>
   </select>
-</div>
-</div>
-</div>
-<div class="form-group">
-            <div class="row">
-              <div class="col-md-1 col-md-offset-11" >
-                 <button type="button" class="btn btn-default">Додати ділянку</button>
-                  
-                 </div>
-             </div>
-    </div>
-           
-       </form>
-      </div>
-    
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-11">
+                            <button type="button" class="btn btn-default">Додати ділянку</button>
+
+                        </div>
+                    </div>
+                </div>
+
+        </form>
+        </div>
+
 
 </body>
+
 </html>
