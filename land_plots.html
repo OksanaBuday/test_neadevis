@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <title>Land Plots</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body ng-app="myapp" ng-controller="ListController">
     <div class="page page-table">
         <section class="panel panel-default table-dynamic">
             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-translate="LBL_FINANCICAL_RECEIPT_CREATION_HEADER"></span> </strong></div>
@@ -30,58 +31,73 @@
                         </ul>
                     </div>
                     <hr />
-                    <div class="row">
+                    <div class="row" ng-hide="!personalDetails.length">
                         <div class="container">
                             <table class="table table-striped table-hover ">
 
                                 <tr class="active ">
                                     <th></th>
                                     <th></th>
-                                    <th class="text-center">Кадастровий номер</th>
-                                    <th class="text-center">Область, район</th>
-                                    <th class="text-center">Документ</th>
-                                    <th class="text-center">ЗК</th>
-                                    <th class="text-center">З</th>
+                                    <th class="text-center text-primary">Кадастровий номер</th>
+                                    <th class="text-center text-primary">Область, район</th>
+                                    <th class="text-center text-primary">Документ</th>
+                                    <th class="text-center text-primary">ЗК</th>
+                                    <th class="text-center text-primary">З</th>
                                 </tr>
-                                <tr class="info text-center">
+                                <tr class="info text-center text-primary">
+                                    <td><span class="glyphicon glyphicon-remove-circle"></span></td>
+                                    <td><span class="glyphicon glyphicon-new-window"></span></td>
+                                    <td>1234756557:12:32:3432</td>
+                                    <td>Миколаївська обл, Арбузинський р-н</td>
+                                    <td >Свідоцтво про право власності № 123</td>
+                                    <td> <input type="checkbox" name=""></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr class="text-center text-primary truncate">
+                                    <td><span class="glyphicon glyphicon-remove-circle"></span></td>
+                                    <td><span class="glyphicon glyphicon-new-window"></span></td>
+                                    <td>1234756557:12:32:3432</td>
+                                    <td>Миколаївська обл, Арбузинський р-н</td>
+                                    
+                                    <td class=" ellipsis">Свідоцтво про право власності № 12388888</td>
+                                    <td> <input type="checkbox" name=""></td>
+                                    <td type="number">2</td>
+                                </tr>
+                                <tr class="info text-center text-primary">
                                     <td><span class="glyphicon glyphicon-remove-circle"></span></td>
                                     <td><span class="glyphicon glyphicon-new-window"></span></td>
                                     <td>1234756557:12:32:3432</td>
                                     <td>Миколаївська обл, Арбузинський р-н</td>
                                     <td>Свідоцтво про право власності № 123</td>
-                                    <td> <input type="checkbox" name=""></td>
+                                    <td>  <input  type="checkbox" value="" disabled></td>
                                     <td type="number">2</td>
                                 </tr>
-                                <tr class="text-center">
-                                    <td><span class="glyphicon glyphicon-remove-circle"></span></td>
-                                    <td><span class="glyphicon glyphicon-new-window"></span></td>
-                                    <td>1234756557:12:32:3432</td>
-                                    <td>Миколаївська обл, Арбузинський р-н</td>
-                                    <td>Свідоцтво про право власності № 123</td>
-                                    <td> <input type="checkbox" name=""></td>
-                                    <td type="number">2</td>
-                                </tr>
-                                <tr class="info text-center">
-                                    <td><span class="glyphicon glyphicon-remove-circle"></span></td>
-                                    <td><span class="glyphicon glyphicon-new-window"></span></td>
-                                    <td>1234756557:12:32:3432</td>
-                                    <td>Миколаївська обл, Арбузинський р-н</td>
-                                    <td>Свідоцтво про право власності № 123</td>
-                                    <td> <input type="checkbox" name=""></td>
-                                    <td type="number">2</td>
-                                </tr>
+                                 <tr ng-repeat="personalDetail in personalDetails">
+                            <tdng-model="personalDetail.selected">
+                               </td>
+                                
+                                <td></td>
+                                <td></td>
+                            <td>{{personalDetail.number}}</td>
+                            <td>{{personalDetail.reg}}</td>
+                            <td>{{personalDetail.doc}}</td>
+                          
+                            
+                            <td></td>
+                            <td></td>
+                            </tr>
                             </table>
                         </div>
 
-                        <div class="container">
-                            <form role="form" class="col-md-8 col-md-offset-2">
+                        <div class="container ">
+                            <form role="form" class="col-md-8 col-md-offset-2" ng-submit="addNew(personalDetails)">
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-6 text-right">
+                                        <div class="col-md-6 text-right text-primary">
                                             <label for="input">Кадастровий номер ділянки*  </label>
                                         </div>
                                         <div class="col-md-5">
-                                            <input id="input" class="form-control" type="text" placeholder="------">
+                                            <input id="input" class="form-control" type="text" placeholder="------" ng-model="personalDetails.number">
 
                                         </div>
                                         <div class="col-md-1">
@@ -92,11 +108,11 @@
                                     <br>
                                     <div class="form-group input-group">
                                         <div class="row">
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 text-right text-primary">
                                                 <label for="document">Документ, що посвідчує право власності/користування ділянкою* </label>
                                             </div>
                                             <div class="col-md-6">
-                                                <textarea id="document" class="form-control" rows="2" cols="50"></textarea>
+                                                <textarea id="document" class="form-control" rows="2" cols="50" ng-model="personalDetails.doc"></textarea>
 
                                             </div>
                                         </div>
@@ -104,11 +120,11 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 text-right text-primary">
                                                 <label for="sel1">Область*</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <select class="form-control" id="sel1">
+                                                <select class="form-control" id="sel1" ng-model="personalDetails.reg">
                                 <option>Львівська</option>
                                 <option>Вінницька</option>
                                 <option>Волинська</option>
@@ -120,11 +136,11 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 text-right text-primary">
                                                 <label for="sel2">Район*</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <select class="form-control" id="sel2">
+                                                <select class="form-control" id="sel2" ng-model="personalDetails.lname">
                                 <option>Стрийський</option>
                                 <option>Вінницька</option>
                                 <option>Волинська</option>
@@ -135,11 +151,11 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 text-right text-primary" >
                                                 <label for="sel3">Населений пункт(якщо ділянка в межах населеного пункту*</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <select class="form-control" id="sel3">
+                                                <select class="form-control" id="sel3" ng-model="personalDetails.lname">
                                 <option>Місто</option>
                                 <option>Вінницька</option>
                                 <option>Волинська</option>
@@ -151,7 +167,10 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-1 col-md-offset-11">
-                                                <button type="button" class="btn btn-default">Додати ділянку</button>
+                                                 <div class="clearfix">
+                                <input type="submit" value="Додати ділянку" class="btn btn-primary">    
+                            </div>
+                                                <!--<button type="button" class="btn btn-default">Додати ділянку</button>-->
 
                                             </div>
                                         </div>
@@ -167,6 +186,7 @@
                 </div>
         </section>
         </div>
+        <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
