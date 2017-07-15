@@ -6,10 +6,10 @@
                 <div>
                     <ul class="nav nav-pills tabs">
                         <li class="btn">
-                          <a href="delivery_terms.html"><span data-translate="LBL_DELIVERY_TERMS">DELIVERY TERMS</span></a>
+                            <a href="delivery_terms.html"><span data-translate="LBL_DELIVERY_TERMS">DELIVERY TERMS</span></a>
                         </li>
                         <li class="btn">
-                           <a href="land_plots.html"> <span data-translate="LBL_LAND_PLOTS" >LAND PLOTS</span></a>
+                            <a href="land_plots.html"> <span data-translate="LBL_LAND_PLOTS">LAND PLOTS</span></a>
                         </li>
                         <li class="btn btn-primary">
                             <span data-translate="LBL_PLEDGE_SUBJECT">SUBJECT</span>
@@ -21,17 +21,13 @@
                     <form role="form" name="ctrl.creationForm" class="col-md-7 col-md-offset-2" novalidate>
 
                         <!--Delivery terms tab-->
-                    
-						<label><span>Field name</span></label>
-							<input type="number" class="form-control"
-								   name="CreditorTaxCode"
-								   ng-model="ctrl.creationModel.creditor.taxCode"
-								   ng-maxlength="256"
-								   required>
-							<div class="help-block error" ng-messages="ctrl.creationForm.CreditorTaxCode.$error">
-								<p ng-message="maxlength"><span data-translate="ERR_TAXCODE_JURISTICAL_TOO_LONG"></span></p>
-								<p ng-message="required"><span data-translate="ERR_TAXCODE_JURISTICAL_REQUIRED"></span></p>
-						</div>
+
+                        <label><span>Field name</span></label>
+                        <input type="number" class="form-control" name="CreditorTaxCode" ng-model="ctrl.creationModel.creditor.taxCode" ng-maxlength="256" required>
+                        <div class="help-block error" ng-messages="ctrl.creationForm.CreditorTaxCode.$error">
+                            <p ng-message="maxlength"><span data-translate="ERR_TAXCODE_JURISTICAL_TOO_LONG"></span></p>
+                            <p ng-message="required"><span data-translate="ERR_TAXCODE_JURISTICAL_REQUIRED"></span></p>
+                        </div>
                         <!--Lend plots tab-->
                         <!--<div ng-show="ctrl.currentTab == 5">
                             <h1>page</h1>5
@@ -46,7 +42,7 @@
                 </div>
 
                 <div>
-                    <a class="btn btn-default"  data-translate="LBL_CLOSE">prev</a>
+                    <a class="btn btn-default" data-translate="LBL_CLOSE">prev</a>
                     <a class="btn btn-default pull-right" data-translate="LBL_NEXT">next</a>
                 </div>
             </section>

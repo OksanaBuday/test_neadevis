@@ -1,113 +1,168 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-     <title>Delivery Terms</title>
-    <link rel="stylesheet" href="css/styles.css" >
+    <title>Delivery Terms</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-     <div>
-                    <ul class="nav nav-pills tabs">
-                        <li class="btn">
-                         <a href="index.html">  <span data-translate="LBL_DELIVERY_TERMS"> MAIN </span></a>
-                        </li>
-                        <li class="btn">
-                           <a href="land_plots.html"> <span data-translate="LBL_LAND_PLOTS" >LAND PLOTS</span></a>
-                        </li>
-                       
-                    </ul>
-                </div>
-                <hr />
-                
-                  <div class="container">
-        <form role="form" class="col-md-8 col-md-offset-1">
-              <div class="form-group ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-right"> <label for="number_property">Кількість заставленого рухомого майна*</label></p>
-                          </div>
-              <div class="col-md-6">
-                  <textarea id="number_property" class="form-control" rows="2" ></textarea>
-                 </div>
+    <div class="page page-table">
+        <section class="panel panel-default table-dynamic">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-translate="LBL_FINANCICAL_RECEIPT_CREATION_HEADER"></span> </strong></div>
+            <div class="panel-body">
+                <section class="receipt">
+                    <div>
+                        <ul class="nav nav-pills tabs">
+                            <li class="btn">
+                                <a href="index.html"> <span data-translate="LBL_DELIVERY_TERMS">MAIN</span></a>
+                            </li>
+                            <li class="btn">
+                                <a href="land_plots.html"> <span data-translate="LBL_LAND_PLOTS">LAND PLOTS</span></a>
+                            </li>
+                            <li class="btn btn-primary">
+                                <span data-translate="LBL_PLEDGE_SUBJECT">SUBJECT</span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-              
-              <div class="form-group " >
-                           <div class="row">
-                        <div class="col-md-6" >
-                            <p class="text-right"> <label for="isurance">Умови страхування*</label></p>
-              </div>
-              <div class="col-md-6">
-                  <textarea id="isurance" class="form-control" rows="3"   ></textarea>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6 ">
-                        <p class="text-right"> <label for="input_rating" >Оцінка аграрної розписки</label></p>
-                    </div>
-                    <div class="col-md-6">
-                        <input id="input_rating" type="text" name="number">
-                    </div>
-                    </div>
-                    </div>
+                    <hr />
+                    <div class="container">
+                        <form role="form" class="col-md-8 col-md-offset-1">
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="number_property">Кількість заставленого рухомого майна*</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="number_property" class="form-control" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="isurance">Умови страхування*</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="isurance" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="input_rating">Оцінка аграрної розписки</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input id="input_rating" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
 
 
-                     <div class="form-group " >
-                           <div class="row">
-                        <div class="col-md-6" >
-                           <p class="text-right"> <label for="mortgage">Додаткова застава</label></p>
-              </div>
-              <div class="col-md-6">
-                  <textarea id="mortgege" class="form-control" rows="3"   ></textarea>
-                        </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="mortgage">Додаткова застава</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="mortgege" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="requirements">Вимоги до агротехнологій</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="requirements" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="input_risk">Оцінка ступеня ризику виконання</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input id="input_risk" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="input_method"> Методика оцінки ступеню ризику виконання </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input id="input_method" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="row">
+                                    <div class="col-md-6 text-right">
+                                        <label for="number_property">Додаткові відомості</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="number_property" class="form-control" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </div>
-                <div class="form-group " >
-                           <div class="row">
-                        <div class="col-md-6" >
-                            <p class="text-right"><label for="requirements">Вимоги до агротехнологій</label></p>
-              </div>
-              <div class="col-md-6 " >
-                  <textarea id="requirements" class="form-control" rows="3"></textarea>
-                        </div>
+
+                    <div class="container">
+                        <table class="table table-striped table-hover table table-bordered">
+                            <tr class="active ">
+                                <th class="text-center">Державний номер с/г техніки</th>
+                                <th class="text-center">Тип транспортного засобу</th>
+                                <th class="text-center">Номер технічного паспорту</th>
+                            </tr>
+                            <tr class=" info text-center">
+                                <td class="info"> AB 123876 </td>
+                                <td> Трактор </td>
+                                <td> 234234235 </td>
+                            </tr>
+
+                            <tr class="text-center">
+                                <td>AB 123876 </td>
+                                <td> Трактор </td>
+                                <td> 234234235 </td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-striped table-hover table table-bordered">
+                            <tr class="active">
+                                <th class="text-center col-md-6">Реєстраційний номер тварини</th>
+                                <th class="text-center">Тип тварини</th>
+
+                            </tr>
+                            <tr class=" info text-center">
+                                <td>123876 </td>
+                                <td>ВРХ</td>
+
+                            </tr>
+                            <tr class="text-center">
+                                <td>123876 </td>
+                                <td>ВРХ</td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-                <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                       <p class="text-right"><label for="input_risk">Оцінка ступеня ризику виконання</label></p> 
+                    <div>
+                        <a class="btn btn-default" data-translate="LBL_CLOSE">prev</a>
+                        <a class="btn btn-default pull-right" data-translate="LBL_NEXT">next</a>
                     </div>
-                    <div class="col-md-6">
-                        <input id="input_risk" type="text" name="number">
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6" >
-                        <p class="text-right"> <label for="input_method" > Методика оцінки ступеню ризику виконання </label></p>
-                    </div>
-                    <div class="col-md-6">
-                        <input id="input_method" type="text" name="number">
-                    </div>
-                    </div>
-                    </div>
-                     <div class="form-group ">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-right"> <label for="number_property">Додаткові відомості</label></p>
-                          </div>
-              <div class="col-md-6">
-                  <textarea id="number_property" class="form-control" rows="2" ></textarea>
-                 </div>
-                    </div>
-                </div>
-            </form>
+                </section>
             </div>
-    
+        </section>
+    </div>
+
 </body>
+
 </html>
