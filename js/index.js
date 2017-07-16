@@ -8,7 +8,7 @@ app.controller("ListController", ['$scope', function($scope) {
             'reg':'Вінницька обл',
             'district':'Стрийський р-н', 
             'settlement':'Станків',
-            'doc':'Свідоцтво про право власності № 123'
+            'doc':'Свідоцтво про право власності № 1254'
         },
       ];
     
@@ -46,3 +46,20 @@ app.controller("ListController", ['$scope', function($scope) {
         // }; 
     
 }]);
+
+function shorten(text, maxLength, delimiter, overflow) {
+  delimiter = delimiter || "&hellip;";
+  overflow = overflow || false;
+  var ret = text;
+  if (ret.length > maxLength) {
+    var breakpoint = overflow ? maxLength + ret.substr(maxLength).indexOf(" ") : ret.substr(0, maxLength).lastIndexOf(" ");
+    ret = ret.substr(0, breakpoint) + delimiter;
+  }
+  return ret;
+}
+
+$(document).ready(function() {
+  var $editedText = $(".edited_text");
+  var text = $editedText.text();
+  $editedText.text(shorten(text, 40, "...", false));
+});
