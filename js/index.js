@@ -20,6 +20,8 @@ app.controller("ListController", ['$scope', function($scope) {
 	};
 }]);
 
+
+
 function shorten(text, maxLength, delimiter, overflow) {
 	delimiter = delimiter || "&hellip;";
 	overflow = overflow || false;
@@ -36,3 +38,4 @@ $(document).ready(function() {
 	var text = $editedText.text();
 	$editedText.text(shorten(text, 40, "...", false));
 });
+
